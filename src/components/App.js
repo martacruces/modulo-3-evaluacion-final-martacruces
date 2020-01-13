@@ -44,10 +44,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header/>
-        <h1>Rick y Morty</h1>
         <Switch>
           <Route path="/" exact>
+            <Header/>
             <Searcher searchCharacter={this.state.searchCharacter} handleChange={this.handleChange}/>
             <CharacterList allCharacters={this.state.allCharacters} searchCharacter={this.state.searchCharacter}/>
           </Route>
