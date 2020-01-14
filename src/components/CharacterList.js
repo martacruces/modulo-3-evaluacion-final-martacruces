@@ -19,7 +19,7 @@ const CharacterList = (props) => {
 }
 
 CharacterList.propTypes={
-    allCharacters: PropTypes.object
+    allCharacters: PropTypes.array
 }
 
 export default CharacterList;

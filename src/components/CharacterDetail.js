@@ -24,7 +24,7 @@ const CharacterDetail = props =>{
 }
 
 CharacterDetail.propTypes={
-    characters: PropTypes.object
+    character: PropTypes.object
 }
 
 export default CharacterDetail;
