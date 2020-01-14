@@ -41,6 +41,28 @@
       top: -112px;
       @include maxi-mobile{
         width: 40%;
-    }
+      }
+      @include tablet{
+        width: 80%;
+        .character{
+          display: flex;
+        }
+        .character__avatar{
+          width: 40%
+        }
+        .character__info-wrapper{
+          flex: 1;
+        }
+      }
+      @include desktop{
+        width: 65%;
+        .character__name{
+          font-size: 1.4rem;
+        }
+        .character__info.line{
+          font-size: 1.2rem;
+        }
+        
+      }
     }
 }
