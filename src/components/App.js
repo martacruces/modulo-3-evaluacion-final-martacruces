@@ -13,7 +13,7 @@ class App extends React.Component {
     this.state = {
       allCharacters: [],
       searchCharacter:''
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
     this.renderSingleCharacter = this.renderSingleCharacter.bind(this);
   }
@@ -22,12 +22,12 @@ class App extends React.Component {
     fetchCharacters()
       .then(character => {
         this.setState({
-          allCharacters: character.results,
-        })
-      })
+          allCharacters: character.results
+        });
+      });
   }
   handleChange(value){
-    this.setState({searchCharacter:value})
+    this.setState({searchCharacter:value});
   }
   renderSingleCharacter(props){
     const selectedId = parseInt(props.match.params.id);

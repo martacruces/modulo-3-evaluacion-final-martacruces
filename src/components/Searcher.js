@@ -3,7 +3,7 @@ import React from 'react';
 const Searcher = (props) => {
     const handleChange = evt => {
         const value = evt.target.value;
-        props.handleChange(value)
+        props.handleChange(value);
     }
 
     return <form className="searcher-form">
@@ -18,6 +18,6 @@ const Searcher = (props) => {
             <label htmlFor="searcher" className="fas fa-search searcher-form__label"></label>
         </div>
     </form>
-}
+};
 
 export default Searcher;
