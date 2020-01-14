@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Character from './Character';
+import PropTypes from 'prop-types';
 
 const CharacterList = (props) => {
     return <ul className="character__list">{props.allCharacters
@@ -15,6 +16,10 @@ const CharacterList = (props) => {
             </li>
         )}
     </ul>
+}
+
+CharacterList.propTypes={
+    allCharacters: PropTypes.object
 }
 
 export default CharacterList;

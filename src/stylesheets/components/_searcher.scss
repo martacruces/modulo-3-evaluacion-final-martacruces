@@ -4,6 +4,7 @@
     &__input-wrapper{
       position:relative;
       display: inline-block;
+      min-width: 40%;
     }
     &__input{
       padding: $size-s;
@@ -11,6 +12,7 @@
       border: 1px solid $primary-color;
       box-shadow: 0 0 12px 4px $primary-color;
       padding-left: $size-l;
+      width: 100%;
       &::placeholder{
         color: $placeholder-inputs-color;
         opacity: 1;
