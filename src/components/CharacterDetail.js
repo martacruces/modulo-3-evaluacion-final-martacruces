@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const CharacterDetail = props =>{
     const isAlive = "Alive";
@@ -20,6 +21,10 @@ const CharacterDetail = props =>{
             ) : ''}
         </div>
     </div>
+}
+
+CharacterDetail.propTypes={
+    characters: PropTypes.object
 }
 
 export default CharacterDetail;
