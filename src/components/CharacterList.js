@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Character from './Character';
 
 const CharacterList = (props) => {
-    return <ul className="character__container">{props.allCharacters
+    return <ul className="character__list">{props.allCharacters
         .filter(character =>
             props.searchCharacter === '' || character.name.toLowerCase().includes(props.searchCharacter.toLowerCase())
         )

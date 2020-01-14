@@ -1,0 +1,43 @@
+.character{
+    background-color: $secondary-color;
+    color: $over-secondary-color;
+    box-shadow: 0 0px $size-m 0px $primary-color;
+    transition: all 0.2s ease-in-out;
+    &:not(.character--no-hover):hover{
+      background-color: $primary-color;
+      color:$over-primary-color;
+      .character__info-line-icon{
+        color: $over-primary-color;
+      }
+    }
+    &__avatar{
+      width: 100%;
+      object-fit: cover;
+    }
+    &__info-wrapper{
+      padding: $size-m;
+    }
+    &__name{
+      margin: 0 0 $size-m;
+      font-weight: $font-bold;
+    }
+    &__info-line{
+      font-size: 14px;
+      margin: 0 0 $size-s;
+      &--no-margin {
+        margin-bottom: 0;
+      }
+      &-icon{
+        transition: all 0.2s ease-in-out;
+        margin-right: $size-s;
+        color: $primary-color;
+      }
+    }
+    &-detail{
+      width: 40%;
+      margin: 0 auto;
+      padding-bottom: $size-l;
+      position: relative;
+      top: -112px;
+    }
+}

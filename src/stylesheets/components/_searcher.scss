@@ -1,0 +1,25 @@
+.searcher-form{
+    text-align: center;
+    margin-bottom: $size-l;
+    &__input-wrapper{
+      position:relative;
+      display: inline-block;
+    }
+    &__input{
+      padding: $size-s;
+      border-radius: $size-xs;
+      border: 1px solid $primary-color;
+      box-shadow: 0 0 12px 4px $primary-color;
+      padding-left: $size-l;
+      &::placeholder{
+        color: $placeholder-inputs-color;
+        opacity: 1;
+      }
+    }
+    &__label{
+      position:absolute;
+      left: $size-s;
+      top: calc(50% - 0.5em);
+      color: $placeholder-inputs-color;
+    }
+}

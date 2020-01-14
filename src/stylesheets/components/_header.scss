@@ -1,0 +1,14 @@
+.header{
+    background-image: url("../../images/background-galaxy.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    text-align: right;
+    min-height: 150px;
+    &__logo{
+      margin: $size-l $size-l $size-xl;
+      width: 50%;
+      display: inline-block;
+    }
+}
