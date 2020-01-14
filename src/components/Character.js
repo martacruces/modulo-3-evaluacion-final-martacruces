@@ -6,7 +6,7 @@ const Character = (props) => {
         <img className="character__avatar" src={props.allCharacters.image} alt={props.allCharacters.name}/>
         <div className="character__info-wrapper">
             <h4 className="character__name">{props.allCharacters.name}</h4>
-            <p className="character__info-line">{isHuman === props.allCharacters.species ? (<i class="fas fa-grimace character__info-line-icon"></i>) : (<i class="fab fa-reddit-alien character__info-line-icon"></i>)}{props.allCharacters.species}</p>
+            <p className="character__info-line character__info-line--no-margin">{isHuman === props.allCharacters.species ? (<i class="fas fa-grimace character__info-line-icon"></i>) : (<i class="fab fa-reddit-alien character__info-line-icon"></i>)}{props.allCharacters.species}</p>
         </div>
     </div>
 }

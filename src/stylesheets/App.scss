@@ -9,9 +9,11 @@
   background-size: cover;
   background-position: bottom;
   text-align: right;
+  min-height: 250px;
   &__logo{
     margin: 24px 24px 72px;
     width: 25%;
+    display: inline-block;
   }
 }
 .searcher-form{
@@ -55,9 +57,12 @@
   color: black;
   box-shadow: 0 0px 16px 0px #35afc7;
   transition: all 0.2s ease-in-out;
-  &:hover{
+  &:not(.character--no-hover):hover{
     background-color: #35afc7;
     color:white;
+    .character__info-line-icon{
+      color: white;
+    }
   }
   &__avatar{
     width: 100%;
@@ -72,9 +77,34 @@
   }
   &__info-line{
     font-size: 14px;
-    margin: 0;
-    &-icon{
-      margin-right: 8px;
+    margin: 0 0 8px;
+    &--no-margin {
+      margin-bottom: 0;
     }
+    &-icon{
+      transition: all 0.2s ease-in-out;
+      margin-right: 8px;
+      color: #35afc7;
+    }
+  }
+  &-detail{
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom: 32px;
+    position: relative;
+    top: -112px;
+  }
+}
+.back-button{
+  margin: 0 0 16px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  padding: 8px 16px;
+  background-color: #37b1c7;
+  border-radius: 32px;
+  border: 3px solid #7dc250;
+  &__icon{
+    margin-right: 8px;
   }
 }

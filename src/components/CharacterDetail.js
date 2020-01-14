@@ -5,14 +5,18 @@ const CharacterDetail = props =>{
     const isAlive = "Alive";
     const isHuman = "Human";
     console.log(props.character);
-    return <div>
-        <Link to='/'><p><i class="fas fa-arrow-left"></i>Volver</p></Link>
-        <img src={props.character.image} alt={props.character.name}/>
-        <h3>{props.character.name}</h3>
-        <p>Status: {isAlive === props.character.status ? (<i class="fas fa-heartbeat"></i>) : (<i class="fas fa-skull-crossbones"></i>)}</p>
-        <p>Species: {isHuman === props.character.species ? (<i class="fas fa-grimace"></i>) : (<i class="fab fa-reddit-alien"></i>)}</p>
-        <p>Origin: {props.character.origin.name}</p>
-        <p>Episodes: {props.character.episode.length}</p>
+    return <div className="character-detail">
+        <Link to='/'><p className="back-button"><i class="fas fa-arrow-left back-button__icon"></i>Volver</p></Link>
+        <div className="character character--no-hover">
+            <img className="character__avatar" src={props.character.image} alt={props.character.name}/>
+            <div className="character__info-wrapper">
+                <p className="character__name">{props.character.name}</p>
+                <p className="character__info-line">{isAlive === props.character.status ? (<i className="fas fa-heartbeat  character__info-line-icon"></i>) : (<i className="fas fa-skull-crossbones character__info-line-icon"></i>)}{props.character.status}</p>
+                <p className="character__info-line">{isHuman === props.character.species ? (<i className="fas fa-grimace character__info-line-icon"></i>) : (<i className="fab fa-reddit-alien character__info-line-icon"></i>)}{props.character.species}</p>
+                <p className="character__info-line"><i class="fas fa-globe character__info-line-icon"></i>{props.character.origin.name}</p>
+                <p className="character__info-line character__info-line--no-margin"><i class="fas fa-film character__info-line-icon"></i>{props.character.episode.length} Capítulos</p>
+            </div>
+        </div>
     </div>
 }
 

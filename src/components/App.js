@@ -31,22 +31,18 @@ class App extends React.Component {
   }
   renderSingleCharacter(props){
     const selectedId = parseInt(props.match.params.id);
-    let selectedCharacter;
-    for(const character of this.state.allCharacters){
-      if (character.id === selectedId){
-        selectedCharacter = character;
-      }
-    }
-    console.log(props);
+    const selectedCharacter = this.state.allCharacters.find((character) =>
+      character.id === selectedId
+    );
     return <CharacterDetail character={selectedCharacter}/>
   }
 
   render() {
     return (
       <div className="App">
+        <Header/>
         <Switch>
           <Route path="/" exact>
-            <Header/>
             <Searcher searchCharacter={this.state.searchCharacter} handleChange={this.handleChange}/>
             <CharacterList allCharacters={this.state.allCharacters} searchCharacter={this.state.searchCharacter}/>
           </Route>
